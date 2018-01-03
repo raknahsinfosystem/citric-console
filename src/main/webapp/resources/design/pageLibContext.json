@@ -1,0 +1,31 @@
+{
+	"script":[
+			{"src":"../../../ext/assets/js/plugins/jquery/jquery.js","mode":"both"},
+			{"src":"../../../ext/assets/js/plugins/jquery/jquery-ui.min.js","mode":"design"},
+			{"src":"../../../ext/assets/js/bootstrap-3.3.7-dist/js/bootstrap.js","mode":"both"},
+			{"src":"../../../ext/assets/js/plugins/validation/jquery.validate.min.js","mode":"both"},
+			{"src":"../../../ext/assets/js/plugins/validation/additional-methods.min.js","mode":"both"},
+			{"src":"../../../ext/plugins/js/angular.min.js","mode":"runtime"},
+			{"src":"../../../ext/plugins/js/angular-filter.js","mode":"runtime"},
+		 	{"src":"../../../ext/assets/js/plugins/validation/angular-validate.js","mode":"runtime"},
+			{"src":"../../../script/custom.js","mode":"both"},
+			{"src":"../../../ext/bind-util.js","mode":"both"},
+			{"src":"../../../ext/plugins/loadingModal/jquery.loadingModal-mod.js","mode":"both"},
+			{"src":"../../../Singapp/vendor/toastr/toastr.js","mode":"runtime"}
+		 ],
+	 "style":[
+			{"src":"../../../ext/assets/js/bootstrap-3.3.7-dist/css/bootstrap.min.css","mode":"both","isActiveTheme":true},
+			{"src":"../../../ext/plugins/font-awesome/css/font-awesome.css","mode":"both"},
+			{"src":"../../../ext/plugins/jstree/style.min.css","mode":"both"},
+			{"src":"../../../ext/plugins/jstree/themes/proton/style.css","mode":"both"},
+			{"src":"../../../Singapp/vendor/jquery-ui/themes/base/jquery-ui.css","mode":"design"},
+			{"src":"../../../style/iframe.css","mode":"both"},
+			{"src":"../../../ext/assets/css/layout.css","mode":"both"},
+			{"src":"../../../ext/plugins/loadingModal/jquery.loadingModal.css","mode":"both"},
+			{"src":"../../../Singapp/vendor/toastr/css/toastr.css","mode":"runtime"}
+		 ],
+	  "plugins":
+	  	[
+	  		{"name":"calendar","script":[],"style":[]}
+	  	]
+}

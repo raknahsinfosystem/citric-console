@@ -1,0 +1,321 @@
+/* CSS Document */
+
+/* Universal Elements */
+
+
+html {
+	background: #122e57 url(../img/photo_bg.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
+}
+
+body {
+	
+font-family: 'Source Sans Pro', sans-serif;	
+color: #000000;
+font-size: 14px;
+}
+
+a {
+	color: #0088e2;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #f49419;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #f49419;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #122e57;
+	text-decoration: underline;
+}
+
+H1 {
+	color: #122e57;
+	font-weight: 300;
+	font-size: 30px;
+}
+
+.msg {color: #27697d;}
+
+H2 {color: #122e57;
+	font-weight: 300;
+	font-size: 20px;
+}
+
+
+/* START Login Page */
+
+#loginbox {
+  background: rgba(255, 255, 255, 0.9); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left bottom, rgba(225,225,225,.9), rgba(255,255,255,.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom left, rgba(225,225,225,.9), rgba(255,255,255,.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom left, rgba(225,225,225,.9), rgba(255,255,255,.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, rgba(225,225,225,.9), rgba(255,255,255,.9)); /* Standard syntax */
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px 100px 25px 100px;
+  text-align: center;
+ 
+}
+
+#loginbox img {padding-bottom: 10px;}
+
+#loginbox input {
+border-bottom: 1px solid #122357;
+border-top:none;
+border-left: none;
+border-right: none;
+background: none;
+width: 250px;
+height: 30px;
+	margin-top: 15px;
+	text-align: center;
+}
+
+input[type=text]:focus {
+    border-bottom: 3px solid #122357;
+}
+
+#loginbox .login {
+	background: #122e57;
+	color: #FFFFFF;
+	text-align: center;
+	 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 1px 5px 0 rgba(0, 0, 0, 0.6);
+	width: 125px;
+	height: auto;
+	font-weight: 600;
+	font-size:14px;
+	padding: 10px 0 10px 0;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+	border: none;
+}
+
+#loginbox .login:hover{ background-color: #0088e2; box-shadow:none; opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+border: none;
+
+}
+
+#loginbox .signup {font-size: 16px; margin-top:25px;}
+
+
+/* END Login Page */
+
+
+
+/* START Application Page */
+
+
+/* START Toolbar */
+#toolbar {
+	width: 100%;
+	height: 35px;
+	color: #FFFFFF;
+	background: #122e57;
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 1000;
+}
+
+#toolbar input[type=button] {height: 35px; color: #FFFFFF;
+background: -webkit-linear-gradient(top, #f49419, #ec7112); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, #f49419, #ec7112); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, #f49419, #ec7112); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #f49419, #ec7112); /* Standard syntax */
+border:none;
+	margin-left: 20px;
+	padding: 0 15px 0 15px;
+}
+
+#toolbar input[type=button]:hover {
+background: -webkit-linear-gradient(bottom, #f49419, #ec7112); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #f49419, #ec7112); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #f49419, #ec7112); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top, #f49419, #ec7112); /* Standard syntax */
+
+}
+
+#toolbar #right {float:right; color:#FFFFFF; margin-right:25px; font-size: 14px; margin-top: 10px; font-weight:300;}
+
+#toolbar i {padding-left: 20px;}
+
+#right a{color: #FFFFFF; text-decoration: none;}
+
+#right a:hover{color: #0088e2; text-decoration: none;}
+
+/* END Toolbar */
+
+
+/* START Application Page Content */
+
+
+
+#maincontent {
+	 background: rgba(255, 255, 255, 0.95); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left bottom, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom left, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom left, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* Standard syntax */
+  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:73%;
+	padding: 50px 25px 25px 25px;
+	
+}
+
+
+#rightpane {
+	background: rgba(255, 255, 255, 0.95); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left bottom, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom left, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom left, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* Standard syntax */
+  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+	top:0;
+	right:0;
+	height:100%;
+	width:18%;
+	padding: 50px 25px 25px 25px;
+	
+}
+
+#frequentlyused {
+	background: rgba(255, 255, 255, 0.6); /* For browsers that do not support gradients */
+ 
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+padding: 10px;
+width:315px;
+	float:left;
+	margin-right:15px;
+}
+
+
+
+#frequentlyused h2 {color: #27697d;
+	font-weight: 500;
+	font-size: 20px;
+padding:0 10px 0 0;
+margin:0 0 0 0;}
+
+@media (max-width : 1024px ){
+	#maincontent {width: 50%;}
+	
+}
+
+/* END Application Page Content */
+
+
+
+/* START Settings Page Content */
+#content {
+	background: rgba(255, 255, 255, 0.95); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left bottom, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom left, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom left, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top right, rgba(225,225,225,.95), rgba(255,255,255,.95)); /* Standard syntax */
+  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+	top:70px;
+	left:0;
+	height:100%;
+	/* width:88%;
+	margin: 0 50px 0 50px; */
+	padding: 0 25px 0 25px;
+	
+	
+}
+
+#adminnavtop {
+	height: 75px;
+	border-bottom: 1px solid #122357;
+	border-top:1px solid #122357;
+	
+}
+
+#adminnavtop ul {list-style: none; margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none; }
+
+#adminnavtop li {float:left; padding: 0 30px 0px 30px; text-align: center;}
+
+#adminnavtop i {color:#27697d; font-size: 24px;}
+
+#adminnavtop li a  {text-decoration:none; display:block; padding: 20px 20px 16px 20px; }
+#adminnavtop li a:hover {background: #473a5c; color: #FFFFFF; padding: 20px 20px 16px 20px;}
+
+#adminnavtop a i {text-decoration:none;}
+#adminnavtop a:hover i {background: #473a5c; color: #FFFFFF;}
+
+#subnav {float:left; border-right: 1px solid #122357; height: 75%; width: 13%; padding-top: 15px; padding-right: 10px; position: absolute; }
+
+
+#subnav br {padding-bottom: 15px;}
+
+#admincontent { padding: 15px; text-align: left; float: right; width: 82%; position: relative;}
+
+.active {background: #473a5c; color: #FFFFFF;}
+.active i {color:#FFFFFF;}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+   background:none;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+	text-transform: uppercase;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    color: #f49419;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+button.accordion:after {
+    content: '\f196'; /* Unicode character for "plus" sign (+) */
+    font-size: 10px;
+    color: #122e57;
+    float: left;
+    margin-right: 10px;
+}
+
+button.accordion.active:after {
+    content: '\f147'; /* Unicode character for "minus" sign (-) */
+	 color: #f49419;
+}
+
+/* END Settings Page Content */

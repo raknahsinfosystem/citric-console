@@ -1,0 +1,277 @@
+/**
+* if set to device-width ie10 built-in scrollbar overflows content. Fix it as of here
+* http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that-might-be-bootstrap
+*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@-ms-viewport {
+  width: auto; }
+html, body {
+  height: 100%; }
+
+body {
+  font-weight: 300;
+  overflow-x: hidden; }
+
+th {
+  font-weight: 600; }
+
+body {
+  font: 100% Roboto !important;
+  overflow: auto;
+  background-color: #ffffff; }
+
+.ontime {
+  color: #0087cd; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize !important;
+  font-family: Raleway, sans-serif !important; }
+  h1 i,
+  h2 i,
+  h3 i,
+  h4 i,
+  h5 i,
+  h6 i {
+    color: #0087cd; }
+
+label,
+span,
+p {
+  font-size: 1.3rem; }
+
+sub {
+  font-size: 0.8rem; }
+
+a {
+  color: #0087cd; }
+
+ul {
+  padding: 0px;
+  list-style-type: none; }
+
+hr {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+br {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.btn {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-size: 1.1rem;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+
+.btn-primary,
+button.dt-button,
+div.dt-button,
+a.dt-button {
+  background-color: #0087cd !important;
+  border-bottom: 3px solid #005f9a; }
+  .btn-primary:focus, .btn-primary.focus, .btn-primary:hover, .btn-primary:active, .btn-primary.active,
+  button.dt-button:focus,
+  button.dt-button.focus,
+  button.dt-button:hover,
+  button.dt-button:active,
+  button.dt-button.active,
+  div.dt-button:focus,
+  div.dt-button.focus,
+  div.dt-button:hover,
+  div.dt-button:active,
+  div.dt-button.active,
+  a.dt-button:focus,
+  a.dt-button.focus,
+  a.dt-button:hover,
+  a.dt-button:active,
+  a.dt-button.active {
+    color: #ffffff !important;
+    background-color: #0087cd !important;
+    border: 1px solid #0087cd !important; }
+  .btn-primary i,
+  button.dt-button i,
+  div.dt-button i,
+  a.dt-button i {
+    color: #ffffff; }
+
+.btn-back {
+  opacity: 0.5; }
+  .btn-back:hover {
+    opacity: 1; }
+
+.btn-inverse {
+  border-bottom: 3px solid #222222; }
+  .btn-inverse:hover {
+    border-bottom: 1px solid #343434; }
+
+.btn-success {
+  border-bottom: 3px solid #40953f; }
+  .btn-success:hover {
+    border-bottom: 1px solid #64bd63; }
+
+.btn-default {
+  background-color: #d9d7dd !important;
+  border-bottom: 3px solid #bfbebe; }
+  .btn-default:focus, .btn-default.focus, .btn-default:hover, .btn-default:active, .btn-default.active {
+    color: #ffffff !important;
+    background-color: #d9d7dd !important;
+    border: 1px solid #bfbebe !important; }
+
+button.dt-button,
+div.dt-button,
+a.dt-button {
+  border: none;
+  background-image: none; }
+
+.ui-buttonset .ui-button {
+  margin-right: 0.3rem;
+  border: none; }
+
+.input-group-btn .btn-options {
+  background-color: transparent;
+  border: none; }
+  .input-group-btn .btn-options i {
+    font-size: 1.6rem;
+    color: #0087cd; }
+
+.sidebar {
+  opacity: 1; }
+
+.navbar-form {
+  padding: 0px 0px 0px 2rem;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+#nav-header-top .nav-item:hover, #nav-header-top .nav-item:focus {
+  background: transparent; }
+  #nav-header-top .nav-item:hover .nav-link, #nav-header-top .nav-item:focus .nav-link {
+    background-color: transparent;
+    color: #f7ca4c; }
+    #nav-header-top .nav-item:hover .nav-link i, #nav-header-top .nav-item:focus .nav-link i {
+      background: transparent; }
+
+.navbar {
+  min-height: 35px; }
+
+.navbar-nav .nav-item .nav-link {
+  color: #676767;
+  padding-bottom: 0px;
+  padding-top: 2px; }
+.navbar-nav .nav-item:hover {
+  background: #f7ca4c; }
+.navbar-nav .icons {
+  font-size: 1.2rem; }
+.navbar-nav i {
+  font-size: 1.3rem; }
+
+/*.nav-tabs {
+	border-bottom: 5px solid $grey;
+	background-color: $white;
+	.nav-item {
+		margin-bottom: -7px;
+	}
+}*/
+.nav-collapsed .logo .normal {
+  display: none; }
+.nav-collapsed .logo .small {
+  display: block !important; }
+  .nav-collapsed .logo .small img {
+    width: 87%; }
+
+.navbar-collapse {
+  background: #ffffff; }
+  .navbar-collapse .nav.navbar-nav > li > a {
+    padding: 5px 5px 9px 15px; }
+
+#menu.sidebar-nav li .b-t {
+  border-top: 1px solid #5b5b5b; }
+#menu.sidebar-nav li a {
+  color: #f2f2f2;
+  padding-top: 0px; }
+  #menu.sidebar-nav li a .icon {
+    background-color: #0087cd;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-bottom: 3px solid #005f9a;
+    width: 32px;
+    height: 28px;
+    border-radius: 6px; }
+    #menu.sidebar-nav li a .icon i {
+      font-size: 1.7rem;
+      color: #f2f2f2;
+      padding-top: 0.5rem; }
+#menu.sidebar-nav li:hover a {
+  color: #f7ca4c; }
+  #menu.sidebar-nav li:hover a .icon {
+    background-color: #f7ca4c;
+    border-bottom: none; }
+#menu.sidebar-nav li:active a, #menu.sidebar-nav li.active a {
+  color: #f7ca4c; }
+  #menu.sidebar-nav li:active a .icon, #menu.sidebar-nav li.active a .icon {
+    background: transparent;
+    border: none; }
+    #menu.sidebar-nav li:active a .icon i, #menu.sidebar-nav li.active a .icon i {
+      color: #f7ca4c; }
+
+#navbar-right {
+  float: right; }
+
+.form-control, select {
+  border-left: none;
+  border-bottom: 1px solid #d9d7dd;
+  border-top: none;
+  border-right: none;
+  font-weight: 300;
+  font-size: 1.3rem;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 2px 4px;
+  height: auto; }
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] {
+  background-color: transparent;
+  color: #999999; }
+
+.content {
+  padding: 70px 40px 42px !important; }
+
+.nav-tabs {
+  background: transparent; }
+  .nav-tabs li a {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background: transparent !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .nav-tabs li:active, .nav-tabs li.active {
+    border-bottom: 3px solid #0087cd; }
+    .nav-tabs li:active a, .nav-tabs li.active a {
+      color: #0087cd;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      .nav-tabs li:active a:focus, .nav-tabs li:active a:hover, .nav-tabs li.active a:focus, .nav-tabs li.active a:hover {
+        color: #0087cd;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }

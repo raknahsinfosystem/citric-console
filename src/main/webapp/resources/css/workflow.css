@@ -1,0 +1,28 @@
+#schemaFormContainer {
+	border-radius: 0;
+	border: 1px solid #d9d9d9;
+	box-shadow: 1px 1px 5px 0px #d9d9d9;
+}
+
+#form-workflow>bootstrap-decorator>h1.title {
+	color: #0087c9;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+ 
+
+#workflowModal .btn-group , .form-workflow .btn-group {
+	float:right;
+}
+
+#form-workflow .btn-group{
+	text-align:center;
+}
+
+#form-workflow .form-group > select{
+	width:40%;
+}
+
+

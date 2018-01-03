@@ -1,0 +1,20 @@
+---
+applications:
+- name: eportal-platform-ui
+  path: ./target/eportal-console-app-1.0.0.war
+  memory: 1G
+  instances: 1
+env:
+  ENDPOINT_APP_SERVICE_URL: http://localhost:8082/
+  AUTHENTICATE_USER_KEY: AUTHENTICATE_USER_KEY
+  ENDPOINT_DASHBOARD: http://localhost:8082/
+  ENDPOINT_ORDER: http://localhost:8082/
+  ENDPOINT_INTERFACE: http://localhost:8082/
+  ENDPOINT_DECISION: http://localhost:8082/
+  ENDPOINT_WORKFLOW: http://localhost:8082/
+  ENDPOINT_DMN_RULES: http://localhost:8082/
+  ENDPOINT_PROCESS: http://localhost:8082/
+  ENDPOINT_USER_MANAGEMENT: http://localhost:8082/
+  ENDPOINT_AUDIT_LOG: http://localhost:8082/
+  ENDPOINT_SERVICE_CATALOG: http://localhost:8082/
+---

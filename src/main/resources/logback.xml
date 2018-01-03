@@ -1,0 +1,105 @@
+<configuration scan="false" debug="false">
+	<!-- <configuration> -->
+	<!-- <property name="LOG_HOME" value="/logs" /> -->
+	<springProperty scope="context" name="spring.application.name" source="spring.application.name"
+					defaultValue="eportal-ui"/>
+	<!-- definition of appender STDOUT -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger - %M - %L
+				: %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- definition of appender ROLLING to a file -->
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/eportal-console-app.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger - %M - %L
+				: %msg%n
+			</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>${LOG_HOME}/eportal-console-app.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>5MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	<appender name="ELASTIC" class="com.internetitem.logback.elasticsearch.ElasticsearchAppender">
+		<url>http://${ELASTIC_IP:-localhost}:${ELASTIC_REST_PORT:-9200}/_bulk</url>
+		<index>application-log</index>
+		<type>${spring.application.name}</type>
+		<loggerName>es-logger</loggerName> <!-- optional -->
+		<errorLoggerName>es-error-logger</errorLoggerName> <!-- optional -->
+		<connectTimeout>30000</connectTimeout> <!-- optional (in ms, default 30000) -->
+		<errorsToStderr>false</errorsToStderr> <!-- optional (default false) -->
+		<includeCallerData>false</includeCallerData> <!-- optional (default false) -->
+		<logsToStderr>false</logsToStderr> <!-- optional (default false) -->
+		<maxQueueSize>104857600</maxQueueSize> <!-- optional (default 104857600) -->
+		<maxRetries>3</maxRetries> <!-- optional (default 3) -->
+		<readTimeout>30000</readTimeout> <!-- optional (in ms, default 30000) -->
+		<sleepTime>250</sleepTime> <!-- optional (in ms, default 250) -->
+		<rawJsonMessage>false</rawJsonMessage> <!-- optional (default false) -->
+		<includeMdc>false</includeMdc> <!-- optional (default false) -->
+		<maxMessageSize>100</maxMessageSize> <!-- optional (default -1 -->
+		<authentication class="com.internetitem.logback.elasticsearch.config.BasicAuthentication"/> <!-- optional -->
+		<properties>
+			<property>
+				<name>host</name>
+				<value>${ELASTIC_IP:-localhost}</value>
+				<allowEmpty>false</allowEmpty>
+			</property>
+			<property>
+				<name>severity</name>
+				<value>%level</value>
+			</property>
+			<property>
+				<name>thread</name>
+				<value>%thread</value>
+			</property>
+			<property>
+				<name>stacktrace</name>
+				<value>%ex</value>
+			</property>
+			<property>
+				<name>logger</name>
+				<value>%logger</value>
+			</property>
+		</properties>
+		<headers>
+			<header>
+				<name>Content-Type</name>
+				<value>text/plain</value>
+			</header>
+		</headers>
+	</appender>
+	<logger name="org.springframework" level="${ROOTLOGGERLEVEL:-ERROR}" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="org.springframework.data" level="${ROOTLOGGERLEVEL:-ERROR}" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="es-logger" level="${ROOTLOGGERLEVEL:-ERROR}" additivity="false">
+		<appender name="ES_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<encoder>
+				<pattern>%msg
+				</pattern> <!-- This pattern is important, otherwise it won't be the raw Elasticsearch format anyomre -->
+			</encoder>
+		</appender>
+	</logger>
+
+	<root level="${ROOTLOGGERLEVEL:-ERROR}">
+		<!-- appender referenced after it is defined -->
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="${APPLICATION_LOG_STORE:-FILE}" />
+	</root>
+</configuration>
